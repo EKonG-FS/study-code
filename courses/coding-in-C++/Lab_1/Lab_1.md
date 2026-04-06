@@ -51,7 +51,13 @@ g++ helloWorld.cpp -o helloWorld
 
 ## 🟢 Section II: Age Validation
 
-The goal of this section is to get to know some new features of the C++ language including bool, namespaces, input/output via streams.
+The goal of this section is to get to know some new features of the C++ language.
+
+You will practice the following concepts:
+* bools
+* portable data types
+* namespaces
+* input/output via streams
 
 ### Task Description
 Your task is to implement a software that receives the age of an user via keyboard and determines if the user is a kid/teenager, an adult or a senior citizen.
@@ -59,7 +65,7 @@ Your task is to implement a software that receives the age of an user via keyboa
 ### Requirements
 
 * Create a namespace called __validation__
-* Inside it, implement two functions:
+* Inside of it, implement two functions:
 ```c
 bool isAdult(___ age)
 ```
@@ -91,13 +97,20 @@ Please enter your age: 13
 You are 13 years old.
 That means that you are still a kid or teenager.
 ```
-* Use the portable data type __uint8_t__ in the main to store entered age.
-* Implement it with and without the keyword __using__
+```c
+Please enter your age: abcd
+You did not enter a valid number. Please try again.
+Please enter your age:
+```
+* Ensure that the user input is a number not some random text
+* Ensure that the user input is not negative
+* Ask the user to re-enter the input if it was not valid
+* Use the portable data type __uint8_t__ in the main function to store entered age.
 
 ### Questions & further tasks
 Note: Write the answers for the questions in the code as comments.
 * What exactly is the problem when using __uint8_t__ for storing the entered age of the user?
-* Fix the issue when using __uint8_t__ by using an integer and static casts instead.
+* Fix the issue when using __uint8_t__ by using an integer for the user input and static casts for the parameters instead.
 * Which other portable data types would make sense in this example?
 
 ## 🟡 Section III: Student Grade Report Formatter
