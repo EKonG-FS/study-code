@@ -209,3 +209,45 @@ Write a corrected version of the program that solves all found issues and is in 
 
 ### Hint
 Many of the errors are related to core OOP principles such as encapsulation, proper initialization, and safe memory handling discussed in the lecture.
+
+## 🟢 Section IV: Create UML Class Diagrams
+
+In this section you will practice the basics of the UML class diagram notation.
+
+### Task Description
+
+You are asked to model a small system for a **cinema**.
+
+A cinema manages movies, customers, and tickets.
+
+- A **Movie** has a title, duration (in minutes), and a base price.
+- A **Customer** has a name and a unique customer ID.
+- A **Ticket** represents the purchase of a movie ticket and contains the movie price.
+
+### Requirements
+
+- A movie can calculate its **price with tax**.
+- A ticket stores the **seat number** and whether it has been used.
+- A ticket can be **validated** (used).
+- A customer can check whether they are a **VIP customer** (based on internal/hidden logic).
+- The total number of created tickets should be tracked.
+- The final ticket price depends on the movie price.
+
+---
+
+## Tasks
+
+1. Model the described system in an UML class diagram in drawIO.
+
+2. For each class:
+   - Define **attributes with visibility and data types**
+   - Include at least:
+     - one **static attribute**
+     - one **derived attribute**
+
+3. Define fitting **methods (operations)**:
+   - At least per class:
+     - one method **with parameters**
+     - one method **without parameters**
+   - Mark appropriate methods with `{query}`
+   - Use the direction for parameters
