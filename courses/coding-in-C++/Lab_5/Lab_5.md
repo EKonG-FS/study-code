@@ -164,7 +164,7 @@ A flight recorder captured the following data:
 #### Requirements
 
 - Store the data in a `std::vector`
-- Print the original data
+- Print the original data with the help of a for-each loop
 - Sort the data using a STL algorithm
 - Print the sorted data
 - Search for value `63`
