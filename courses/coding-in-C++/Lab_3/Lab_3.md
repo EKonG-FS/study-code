@@ -186,3 +186,130 @@ To test the classes in main:
 
 1. What would change if the access specifier in the inheritance declaration is deleted?
 2. Why is it important to call the base class constructor?  
+
+## 🟡 Section III: Game Character System – Inheritance and Class Relationships
+
+You are part of a small game development studio working on a new fantasy role-playing game.  
+Your team is responsible for implementing the first version of the character system.
+
+The game should support different types of characters, such as warriors and mages.  
+Each character owns an inventory and can use a weapon. Your task is to model the system using UML and then implement it in C++.
+
+---
+
+### 🎯 Learning Goals
+
+In this task you will practice:
+
+- modeling inheritance in UML
+- identifying class relationships
+- distinguishing composition, aggregation, and association
+- implementing inheritance in C++
+
+---
+
+### 📘 Requirements
+
+The game contains different characters.
+
+Each character has:
+
+- a name
+- health points
+- a level
+
+There are two main character types:
+
+- `Warrior`
+- `Mage`
+
+A `Warrior` has:
+
+- weapon skill points
+
+A `Mage` has:
+
+- mana points
+
+Both types can regenerate their specific points.
+
+In addition, there are jobs with specific skills which are based on exactly one of these two character types such as:
+- Thief (can steal from enemies)
+- Healer (can heal other characters and himself)
+
+while others are based on both types at the same time such as:
+- Paladin (can heal and perform a shield bash)
+
+The minimum level is 1 while the maximum level is 10.
+To reach the next level, a level specific experience point limit has to be surpassed.
+
+Every job skill should return the calling object so that multiple skills can be called fluently in sequence.
+
+Each character owns exactly one `Inventory`.
+
+An `Inventory` can store a limited number of item names.
+
+A character can use one `Weapon`.
+
+A `Weapon` has:
+
+- a name
+- a damage value
+
+---
+
+### 🟢 Task Part 1 – UML Class Diagram
+
+Create a UML class diagram based on the requirements above.
+
+Your UML diagram must include:
+
+- attributes with visibility and data types
+- methods with visibility and return types
+- inheritance relationships
+- composition, aggregation, or association where appropriate
+- multiplicities
+- marked static and readonly attributes, methods and parameters
+
+---
+
+### 🟡 Task Part 2 – Implement the Base Class
+
+Implement the class `Character`.
+
+The class should contain:
+
+- protected attributes:
+  - `name`
+  - `health`
+  - `level`
+
+- public methods:
+  - constructor with parameters
+  - `printInfo()`
+  - `levelUp()`
+
+The method `levelUp()` should increase the level by 1.
+
+---
+
+### 🟡 Task Part 3 – Implement Derived Classes
+
+Implement the classes:
+
+- `Warrior`
+- `Mage`
+
+Both classes should inherit publicly from `Character`.
+
+Each derived class must:
+
+- call the base class constructor using an initializer list
+- initialize its own additional attribute
+- implement a method `printRole()`
+
+Example output:
+
+```text
+Role: Warrior
+Armor: 50
