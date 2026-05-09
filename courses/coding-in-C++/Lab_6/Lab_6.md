@@ -88,7 +88,10 @@ Examples:
 Create three sensors to measure the above mentioned states and intentionally trigger invalid situations.
 
 Use catch blocks directly after the try statements in the main with a ```std::exception``` parameter.
-Use the what-method to output the catched exception.
+Use the what-method to output the catched exception message.
+
+### Question
+- What would happen to an object if you throw an exception within its constructor?
 
 ---
 
